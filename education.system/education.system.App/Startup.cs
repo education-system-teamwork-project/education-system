@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using education.system.App.Data;
-using education.system.App.Models;
-using education.system.App.Services;
-
-namespace education.system.App
+﻿namespace education.system.App
 {
+    using education.system.Data;
+    using education.system.Data.Models;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using education.system.App.Extensions;
+    using AutoMapper;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -26,15 +23,16 @@ namespace education.system.App
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<EducationSystemDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<EducationSystemDbContext>()
                 .AddDefaultTokenProviders();
 
-            // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();
+            services.UseServices();
+
+            services.AddAutoMapper();
 
             services.AddMvc();
         }
@@ -54,6 +52,8 @@ namespace education.system.App
             }
 
             app.UseStaticFiles();
+
+            app.UseDatabaseMigration();
 
             app.UseAuthentication();
 

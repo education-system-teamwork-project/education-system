@@ -5,13 +5,20 @@
     <UserSecretsId>aspnet-education.system.App-5DE07251-7E18-4372-A689-B29ADED4CF56</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="AutoMapperProfiles\**" />
+    <Content Remove="AutoMapperProfiles\**" />
+    <EmbeddedResource Remove="AutoMapperProfiles\**" />
+    <None Remove="AutoMapperProfiles\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.3" />
     <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.3" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
   </ItemGroup>
 
@@ -22,8 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Configurations\" />
-    <Folder Include="AutoMapperProfiles\" />
+    <ProjectReference Include="..\education.system.Data\education.system.Data.csproj" />
+    <ProjectReference Include="..\education.system.Services\education.system.Services.csproj" />
   </ItemGroup>
 
 </Project>
