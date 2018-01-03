@@ -30,3 +30,11 @@ footer {
     background-color: silver;
     text-align: center;
 }
+
+form h4 {
+    text-align: center;
+    background-color: silver;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
