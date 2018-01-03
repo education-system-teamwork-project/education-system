@@ -1,0 +1,32 @@
+.jumbotron {
+    background-image: url("images/1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.jumbotron h3 {
+    background-color: rgba(200, 200, 200, 0.4);
+    border-radius: 10px;
+}
+
+form a {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.courses div img {
+    max-height: 120px;
+    margin: 0 auto;
+}
+
+.courses div h4 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: silver;
+    text-align: center;
+}
