@@ -38,3 +38,27 @@ form h4 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.lesson-info {
+    margin-top: 50px;
+}
+
+.lesson-info h3 {
+    text-align: center;
+}
+
+.trainer img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.trainer .img {
+    float: left;
+    margin: 0 15px 15px 0;
+}
