@@ -15,7 +15,7 @@ form a {
     display: inline-block;
 }
 
-.courses div img {
+.courses div img, .course-lessons img, .category-courses img {
     max-height: 120px;
     margin: 0 auto;
 }
@@ -61,4 +61,13 @@ iframe {
 .trainer .img {
     float: left;
     margin: 0 15px 15px 0;
+}
+
+.course-info {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.course-lessons li {
+    margin: 20px 15px;
 }
