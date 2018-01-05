@@ -5,7 +5,7 @@
     <title>Lesson Name</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="./css/site.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -14,20 +14,40 @@
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Education System</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Education System</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="">
+                  <a href="authorized-home.html">Home</a>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="category.html">PHP Web</a></li>
+                    <li><a href="category.html">Java Web</a></li>
+                    <li><a href="category.html">Js Web</a></li>
+                    <li><a href="category.html">C# Web</a></li>                        
+                  </ul>
+                </li>
+                <li class="">
+                  <a href="my-courses.html">My Courses</a>
+                </li>
+                <li class="">
+                  <a href="my-profile.html">My Profile</a>
+                </li>
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a>Hello, Username!</a>
+                </li>
+                <li class="">
+                  <a href="unauthorized-home.html">Logout</a>
+                </li>
+              </ul>
             </div>
-        </nav>
+          </nav>
     </header>
 
     <main>
