@@ -55,6 +55,8 @@
 
             app.UseDatabaseMigration();
 
+            app.UseRoles();
+
             app.UseAuthentication();
 
             app.UseMvc(routes =>

@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using education.system.App.Models.AccountViewModels;
-using education.system.App.Services;
 using education.system.Data.Models;
 
 namespace education.system.App.Controllers

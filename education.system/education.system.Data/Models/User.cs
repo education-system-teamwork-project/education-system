@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-
-namespace education.system.Data.Models
+﻿namespace education.system.Data.Models
 {
-    // Add profile data for application users by adding properties to the ApplicationUser class
+    using Microsoft.AspNetCore.Identity;
+    using System.Collections.Generic;
+    
     public class User : IdentityUser
     {
+        public ICollection<CoursesStudents> EnrolledCourses { get; set; } = new List<CoursesStudents>();
+
+        public ICollection<CoursesLecturers> LecturingCourses { get; set; } = new List<CoursesLecturers>();
     }
 }

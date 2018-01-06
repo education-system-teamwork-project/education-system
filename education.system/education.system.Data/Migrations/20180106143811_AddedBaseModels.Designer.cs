@@ -11,9 +11,10 @@ using System;
 namespace education.system.Data.Migrations
 {
     [DbContext(typeof(EducationSystemDbContext))]
-    partial class EducationSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180106143811_AddedBaseModels")]
+    partial class AddedBaseModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
