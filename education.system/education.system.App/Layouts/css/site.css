@@ -71,3 +71,15 @@ iframe {
 .course-lessons li {
     margin: 20px 15px;
 }
+
+.profile-pic  {
+    margin-top: 35px;
+    width: 200px;
+    margin-left: 17px;
+}
+
+.btn-change {
+    margin-top: 35px;
+    width: 200px;
+    margin-left: 17px;
+}
